@@ -1,0 +1,47 @@
+{
+    "api": {
+        "root": "http://192.168.10.6:3000/api",
+        "auth": {
+            "root": "/auth",
+            "login": "/token"
+        }
+    },
+    "NavigationMenu": {
+        "Test Menu": {
+            "perms": "auth",
+            "icon": "fa fa-home",
+            "submenu": {
+                "item1": {
+                    "perms": "root",
+                    "link": "/yat/item1",
+                    "icon": "fa fa-sync",
+                    "submenu": {
+                        "asd": {
+                            "perms": "root",
+                            "link": "/yat/iasd1",
+                            "icon": "fa fa-sync",
+                        },
+                        "asd2": {
+                            "perms": "auth",
+                            "link": "/yat/itasdm2",
+                            "icon": "fa fa-sync"
+                        }
+                    }
+                },
+                "item2": {
+                    "perms": "auth",
+                    "link": "/yat/item2",
+                    "icon": "fa fa-sync"
+                }
+            }
+        },
+        "menu2": {
+            "perms": "auth",
+            "link": "anan",
+            "icon": "fa fa-sync"
+        },
+        "bu bir statictir": {
+            "static": "heading"
+        }
+    }
+}
