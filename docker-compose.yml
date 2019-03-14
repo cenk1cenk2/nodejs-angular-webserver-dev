@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nodejs-angular-webserver-dev:
+    container_name: nodejs-angular-webserver-dev
+    working_dir: /data/app
+    image: nodejs-angular-webserver-dev:latest
+    build: ./build/.
+    volumes:
+      - ./src:/data/app
+    environment:
+      - "NODE_ENV=development"
+    ports:
+      - "4200:4200"
+    network_mode: "bridge"

@@ -1,0 +1,12 @@
+FROM node:11-alpine
+
+WORKDIR /data/app
+
+RUN apk update && apk upgrade
+RUN apk add git --no-cache
+RUN npm install -g npm
+RUN npm install -g @angular/cli --unsafe-perm
+
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT [ "/entrypoint.sh" ]
