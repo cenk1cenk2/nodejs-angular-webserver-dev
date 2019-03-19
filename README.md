@@ -8,6 +8,6 @@ version:      | v1.21, 201900315
 
 This script compiles a container to run a Angular.io web server to develop on. It auto creates a new project if the project folder is empty.
 
-## Configuration:
+## Setup:
 
-Configuration is indifferent between versions. src/ files will be ignored for GitHub.
+**Fast Deploy**
