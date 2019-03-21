@@ -7,7 +7,7 @@ ENVFILENAME=.env
 ENVFILECONTENTS=(
         "## Variables" 
         "# Pole interval for ng serve server to look for updates in miliseconds" \
-        "POLEINT=" \
+        "POLLINT=" \
         "## Rest of the data is static"
         "NODE_ENV=development" \
         )
