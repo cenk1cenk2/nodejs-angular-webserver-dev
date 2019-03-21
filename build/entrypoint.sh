@@ -22,8 +22,8 @@ echo "Poll time is stated as ${POLLINT}"
 ng serve --watch --host 0.0.0.0 --poll ${POLLINT} --disable-host-check
 
 # Graceful shutdown
-function finish {
-  echo "testing exit"
-  exit 0
-}
-trap finish TERM
+# function finish {
+#   echo "testing exit"
+#   exit 0
+# }
+# trap finish TERM
