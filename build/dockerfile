@@ -2,11 +2,17 @@ FROM node:11-alpine
 
 WORKDIR /data/app
 
-RUN apk update && apk upgrade
-RUN apk add git --no-cache
-RUN npm install -g npm
-RUN npm install -g @angular/cli --unsafe-perm
+RUN apk --no-cache --no-progress update && \
+    apk --no-cache --no-progress upgrade && \
+    # Install tini supervisor
+    apk --no-cache --no-progress tini && \
+    # Update NPM
+    npm install -g npm && \
+    # Install Angular.io
+    npm install -g @angular/cli --unsafe-perm
 
-COPY entrypoint.sh /entrypoint.sh
+# Add start script.
+ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT [ "/entrypoint.sh" ]
+
+ENTRYPOINT [ "/sbin/tini", "-v", "-e", "143", "--", "/entrypoint.sh" ]
