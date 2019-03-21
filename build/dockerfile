@@ -5,7 +5,7 @@ WORKDIR /data/app
 RUN apk --no-cache --no-progress update && \
     apk --no-cache --no-progress upgrade && \
     # Install tini supervisor
-    apk --no-cache --no-progress add tini bash && \
+    apk --no-cache --no-progress add tini bash git && \
     # Update NPM
     npm install -g npm && \
     # Install Angular.io
@@ -15,4 +15,4 @@ RUN apk --no-cache --no-progress update && \
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT [ "/sbin/tini", "-v", "/entrypoint.sh" ]
+ENTRYPOINT [ "/sbin/tini", "/entrypoint.sh" ]
