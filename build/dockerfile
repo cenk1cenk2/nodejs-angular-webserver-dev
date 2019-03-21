@@ -15,4 +15,4 @@ RUN apk --no-cache --no-progress update && \
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT [ "/sbin/tini", "-v", "-e", "143", "--", "/entrypoint.sh" ]
+ENTRYPOINT [ "/sbin/tini", "-v", "/entrypoint.sh" ]
