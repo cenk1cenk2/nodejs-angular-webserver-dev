@@ -13,4 +13,4 @@ It auto creates a new project if the project folder is empty.
 
 **Fast Deploy**
 * `cp website-files ./src` or it will create a new project 
-* `chmod +x init-env.sh && ./init-env.sh && nano init-env.sh`
+* `chmod +x init-env.sh && ./init-env.sh`
