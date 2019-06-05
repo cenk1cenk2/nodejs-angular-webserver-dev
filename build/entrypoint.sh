@@ -25,7 +25,7 @@ echo "--------------------------------------------------------------------------
 echo
 echo "Installing all nodejs dependencies or looking for update."
 echo "--------------------------------------------------------------------------"
-npm i --unsafe-perm
+yarn
 echo
 echo "Poll time is stated as ${POLLINT}ms."
 echo "--------------------------------------------------------------------------"
