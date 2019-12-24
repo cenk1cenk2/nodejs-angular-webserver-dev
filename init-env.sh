@@ -5,11 +5,15 @@ echo "init-env.sh@bash: v2.0, 20190321"
 # Write down the data required in .env file here for initiation.
 ENVFILENAME=.env
 ENVFILECONTENTS=(
-        "## Variables" 
+        "## Variables"
+        "# Select enviroment, can be set to development or build"
+        "NODE_ENV=dev"
+        "# If build is selected, you can specify build options here to ng build"
+        "BUILD_OPTS="
         "# Pole interval for ng serve server to look for updates in miliseconds" \
         "POLLINT=" \
-        "## Rest of the data is static"
-        "NODE_ENV=development" \
+        "# If project will be initated from scratch give it a name, ignore otherwise"
+        "INITPROJECT="
         )
 
 ## Script

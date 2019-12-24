@@ -1,14 +1,11 @@
 version: '3'
 services:
   nodejs-angular-webserver-dev:
-    container_name: nodejs-angular-webserver-dev
     working_dir: /data/app
-    image: nodejs-angular-webserver-dev
+    image: cenk1cenk2/nodejs-angular-webserver-dev
     build: ./build/.
     volumes:
       - ./src:/data/app
-    labels:
-      - com.centurylinklabs.watchtower.enable="false"
     env_file: .env
     ports:
       - "4200:4200"
