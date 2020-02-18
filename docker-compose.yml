@@ -1,12 +1,10 @@
 version: '3'
 services:
   nodejs-angular-webserver-dev:
-    working_dir: /data/app
     image: cenk1cenk2/nodejs-angular-webserver-dev
-    build: ./build/.
     volumes:
       - ./src:/data/app
     env_file: .env
     ports:
-      - "4200:4200"
+      - ${ANGULAR_PORT:-4200}:4200
     network_mode: "bridge"

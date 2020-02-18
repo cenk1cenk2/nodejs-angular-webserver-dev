@@ -1,7 +1,7 @@
 ```
 name:         | nodejs-angular-webserver-dev
 compiler:     | docker-compose + dockerfile
-version:      | v1.4, 20191225
+version:      | v1.5, 20200218
 ```
 
 ## Description:
